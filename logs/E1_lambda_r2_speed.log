@@ -1,0 +1,60 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/11/22 06:33:09 WARN Utils: Your hostname, longPc, resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+26/11/22 06:33:09 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+:: loading settings :: url = jar:file:/home/longd/.local/lib/python3.14/site-packages/pyspark/jars/ivy-2.5.3.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /home/longd/.ivy2.5.2/cache
+The jars for the packages stored in: /home/longd/.ivy2.5.2/jars
+org.apache.spark#spark-sql-kafka-0-10_2.13 added as a dependency
+org.postgresql#postgresql added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-64513764-e1c8-45e8-9df0-d73d8c5b67b0;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.13;4.3.0 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.13;4.3.0 in central
+	found org.apache.kafka#kafka-clients;3.9.2 in central
+	found at.yawk.lz4#lz4-java;1.11.0 in central
+	found org.xerial.snappy#snappy-java;1.1.10.8 in central
+	found org.slf4j#slf4j-api;2.0.17 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.5.0 in central
+	found org.apache.hadoop#hadoop-client-api;3.5.0 in central
+	found com.google.code.findbugs#jsr305;3.0.0 in central
+	found org.scala-lang.modules#scala-parallel-collections_2.13;1.2.0 in central
+	found org.apache.commons#commons-pool2;2.13.1 in central
+	found org.postgresql#postgresql;42.7.4 in central
+	found org.checkerframework#checker-qual;3.42.0 in central
+:: resolution report :: resolve 443ms :: artifacts dl 15ms
+	:: modules in use:
+	at.yawk.lz4#lz4-java;1.11.0 from central in [default]
+	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+	org.apache.commons#commons-pool2;2.13.1 from central in [default]
+	org.apache.hadoop#hadoop-client-api;3.5.0 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.5.0 from central in [default]
+	org.apache.kafka#kafka-clients;3.9.2 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.13;4.3.0 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.13;4.3.0 from central in [default]
+	org.checkerframework#checker-qual;3.42.0 from central in [default]
+	org.postgresql#postgresql;42.7.4 from central in [default]
+	org.scala-lang.modules#scala-parallel-collections_2.13;1.2.0 from central in [default]
+	org.slf4j#slf4j-api;2.0.17 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.10.8 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   13  |   0   |   0   |   0   ||   13  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-64513764-e1c8-45e8-9df0-d73d8c5b67b0
+	confs: [default]
+	0 artifacts copied, 13 already retrieved (0kB/11ms)
+26/11/22 06:33:10 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+/home/longd/.local/lib/python3.14/site-packages/pyspark/testing/utils.py:127: FutureWarning: PySpark does not yet fully support pandas >= 3.0.0. Some features may not work correctly. It is recommended to use pandas < 3.0.0 for now.
+  require_minimum_pandas_version()
+26/11/22 06:33:15 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+[speed_layer] started (cores=2, mem=2g, trigger=2000ms, shuffle=200, mode=batch)
+26/11/22 06:33:18 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 2000 milliseconds, but spent 2520 milliseconds
+26/11/22 06:35:19 WARN DAGScheduler: Failed to cancel job group 1a6cf609-79ec-4ca0-b718-3f08847d334b. Cannot find active jobs for it.
+26/11/22 06:35:19 WARN DAGScheduler: Failed to cancel job group 1a6cf609-79ec-4ca0-b718-3f08847d334b. Cannot find active jobs for it.
+[speed_layer] stopped

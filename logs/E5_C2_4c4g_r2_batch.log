@@ -1,0 +1,15 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/11/22 07:02:29 WARN Utils: Your hostname, longPc, resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+26/11/22 07:02:29 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+/home/longd/.local/lib/python3.14/site-packages/pyspark/testing/utils.py:127: FutureWarning: PySpark does not yet fully support pandas >= 3.0.0. Some features may not work correctly. It is recommended to use pandas < 3.0.0 for now.
+  require_minimum_pandas_version()
+26/11/22 07:02:30 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[batch_layer] started (cores=4, mem=4g, interval=30.0s)
+[Stage 0:========================================>                (30 + 4) / 42]                                                                                [Stage 2:>                                                          (0 + 4) / 4]                                                                                [batch_layer] run=1 H=20601 categories=184 events=20601 dur=5780.1ms
+[Stage 10:>                                                         (0 + 4) / 4]                                                                                [batch_layer] run=2 H=50755 categories=205 events=50755 dur=2129.4ms
+[Stage 16:===================================================>  (155 + 4) / 162]                                                                                [Stage 18:>                                                         (0 + 4) / 6][Stage 18:================================================>         (5 + 1) / 6]                                                                                [batch_layer] run=3 H=80925 categories=205 events=80925 dur=2923.4ms
+[Stage 24:==================================>                   (140 + 4) / 221][Stage 24:===============================================>      (196 + 4) / 221]                                                                                [Stage 26:>                                                         (0 + 4) / 7][Stage 26:=================================>                        (4 + 3) / 7][Stage 26:=========================================>                (5 + 2) / 7]                                                                                [batch_layer] run=4 H=110604 categories=205 events=110604 dur=3010.9ms

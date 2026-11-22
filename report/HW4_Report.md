@@ -117,3 +117,13 @@ Chỉ số quan sát `S = 0.998` (`E = 49.9%`) không thể suy diễn là năng
 2. **Lambda hữu ích khi nào và đánh đổi chi phí gì?** Lambda phù hợp khi hệ thống vừa cần độ tươi dưới 1–3 giây vừa cần lưu trữ raw bất biến để tính lại toàn bộ hoặc bù đắp khi Speed Layer gặp sự cố (như E3). Chi phí đánh đổi là RAM tăng 2.1–2.3 lần, CPU tăng 1.5–1.7 lần (hoặc ~2.8 lần khi hạ trigger xuống 500ms) cùng độ phức tạp đồng bộ watermark `H` nguyên tử.
 3. **Scale-up có tăng hiệu năng tương xứng không?** Không đối với throughput streaming khi pipeline vẫn bị giới hạn bởi input rate, Kafka 1 partition và sink tập trung tại driver; tăng gấp đôi CPU/RAM chủ yếu rút ngắn ~36–40% thời gian Batch Layer và tăng biên an toàn bộ nhớ. Muốn mở rộng thông lượng Speed Layer cần tăng số partition Kafka và ghi phân tán từ các executor thay vì gom về `collect()`.
 4. **Có nên áp dụng cải tiến E4 không?** Nên áp dụng nếu ứng dụng yêu cầu `p95 < 1 s` và máy chủ còn dư CPU (hệ thống thử nghiệm chỉ dùng 11–12% tổng CPU ở E4). Nếu triển khai trên môi trường tài nguyên hạn chế, nên giữ `shuffle = 4` kết hợp `trigger = 1000–2000 ms` để cân bằng độ trễ và tải CPU.
+
+<div style="page-break-before: always;"></div>
+
+## Phụ lục: Ảnh chụp Log và Kiểm chứng Hệ thống
+
+![Kiểm chứng Docker, Kafka 1 partition, truy vấn Q1/Q2 và đối chiếu Ground Truth](proof/proof_1_services_kafka_pg.png)
+*Hình A1: Trạng thái các container Docker, mô tả Kafka topic 1 partition, kết quả Q1/Q2 và đối chiếu 120,000 sự kiện trên PostgreSQL.*
+
+![Log thực thi các thành phần Producer, Raw Consumer, Batch Layer, Speed Layer và Monitor](proof/proof_2_pipeline_logs.png)
+*Hình A2: Trích xuất log thực thi thực tế từ các thành phần pipeline trong lượt chạy E3 (dừng và khôi phục checkpoint) và E4 (tối ưu).*

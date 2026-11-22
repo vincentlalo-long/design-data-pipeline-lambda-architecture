@@ -1,0 +1,93 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/11/22 06:57:45 WARN Utils: Your hostname, longPc, resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+26/11/22 06:57:45 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+:: loading settings :: url = jar:file:/home/longd/.local/lib/python3.14/site-packages/pyspark/jars/ivy-2.5.3.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /home/longd/.ivy2.5.2/cache
+The jars for the packages stored in: /home/longd/.ivy2.5.2/jars
+org.apache.spark#spark-sql-kafka-0-10_2.13 added as a dependency
+org.postgresql#postgresql added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-5e1c52c0-0505-41b9-b22c-af5e7ed2e3f3;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.13;4.3.0 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.13;4.3.0 in central
+	found org.apache.kafka#kafka-clients;3.9.2 in central
+	found at.yawk.lz4#lz4-java;1.11.0 in central
+	found org.xerial.snappy#snappy-java;1.1.10.8 in central
+	found org.slf4j#slf4j-api;2.0.17 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.5.0 in central
+	found org.apache.hadoop#hadoop-client-api;3.5.0 in central
+	found com.google.code.findbugs#jsr305;3.0.0 in central
+	found org.scala-lang.modules#scala-parallel-collections_2.13;1.2.0 in central
+	found org.apache.commons#commons-pool2;2.13.1 in central
+	found org.postgresql#postgresql;42.7.4 in central
+	found org.checkerframework#checker-qual;3.42.0 in central
+:: resolution report :: resolve 439ms :: artifacts dl 14ms
+	:: modules in use:
+	at.yawk.lz4#lz4-java;1.11.0 from central in [default]
+	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+	org.apache.commons#commons-pool2;2.13.1 from central in [default]
+	org.apache.hadoop#hadoop-client-api;3.5.0 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.5.0 from central in [default]
+	org.apache.kafka#kafka-clients;3.9.2 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.13;4.3.0 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.13;4.3.0 from central in [default]
+	org.checkerframework#checker-qual;3.42.0 from central in [default]
+	org.postgresql#postgresql;42.7.4 from central in [default]
+	org.scala-lang.modules#scala-parallel-collections_2.13;1.2.0 from central in [default]
+	org.slf4j#slf4j-api;2.0.17 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.10.8 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   13  |   0   |   0   |   0   ||   13  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-5e1c52c0-0505-41b9-b22c-af5e7ed2e3f3
+	confs: [default]
+	0 artifacts copied, 13 already retrieved (0kB/11ms)
+26/11/22 06:57:46 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+/home/longd/.local/lib/python3.14/site-packages/pyspark/testing/utils.py:127: FutureWarning: PySpark does not yet fully support pandas >= 3.0.0. Some features may not work correctly. It is recommended to use pandas < 3.0.0 for now.
+  require_minimum_pandas_version()
+26/11/22 06:57:51 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+[speed_layer] started (cores=2, mem=2g, trigger=500ms, shuffle=4, mode=batch)
+26/11/22 06:57:54 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 2587 milliseconds
+[Stage 2:>                                                          (0 + 1) / 1]                                                                                26/11/22 06:57:55 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 1566 milliseconds
+26/11/22 06:57:56 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 717 milliseconds
+26/11/22 06:57:56 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 648 milliseconds
+26/11/22 06:57:57 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 591 milliseconds
+26/11/22 06:57:58 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 527 milliseconds
+26/11/22 06:57:58 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 535 milliseconds
+26/11/22 06:58:12 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 540 milliseconds
+26/11/22 06:58:13 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 541 milliseconds
+26/11/22 06:58:15 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 557 milliseconds
+26/11/22 06:58:15 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 599 milliseconds
+26/11/22 06:58:16 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 503 milliseconds
+26/11/22 06:58:18 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 502 milliseconds
+26/11/22 06:58:18 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 509 milliseconds
+26/11/22 06:58:19 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 542 milliseconds
+26/11/22 06:58:19 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 520 milliseconds
+26/11/22 06:58:32 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 527 milliseconds
+26/11/22 06:58:44 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 530 milliseconds
+26/11/22 06:58:44 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 523 milliseconds
+26/11/22 06:58:45 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 525 milliseconds
+26/11/22 06:58:46 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 605 milliseconds
+26/11/22 06:58:46 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 555 milliseconds
+26/11/22 06:59:14 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 515 milliseconds
+26/11/22 06:59:16 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 504 milliseconds
+26/11/22 06:59:16 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 504 milliseconds
+26/11/22 06:59:24 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 508 milliseconds
+26/11/22 06:59:24 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 509 milliseconds
+26/11/22 06:59:26 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 544 milliseconds
+26/11/22 06:59:26 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 574 milliseconds
+26/11/22 06:59:27 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 529 milliseconds
+26/11/22 06:59:44 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 511 milliseconds
+26/11/22 06:59:46 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 508 milliseconds
+26/11/22 06:59:47 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 514 milliseconds
+26/11/22 06:59:53 WARN ProcessingTimeExecutor: Current batch is falling behind. The trigger interval is 500 milliseconds, but spent 896 milliseconds
+26/11/22 06:59:55 WARN DAGScheduler: Failed to cancel job group cd9e51b7-fd72-4ec3-bc0e-4ecdb2055aaa. Cannot find active jobs for it.
+26/11/22 06:59:55 WARN DAGScheduler: Failed to cancel job group cd9e51b7-fd72-4ec3-bc0e-4ecdb2055aaa. Cannot find active jobs for it.
+[speed_layer] stopped

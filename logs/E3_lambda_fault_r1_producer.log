@@ -1,0 +1,1 @@
+[producer] done: {"phases": "100:120", "run_start_epoch": 1795329956.7510972, "run_end_epoch": 1795330076.7360232, "elapsed_s": 119.9914, "emitted_events": 12000, "send_errors": 0, "actual_avg_rate": 100.007}
