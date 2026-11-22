@@ -194,8 +194,6 @@ html_full = f"""<!DOCTYPE html>
   </div>
 </div>
 
-<hr class="divider">
-
 {html_body}
 
 </body>
