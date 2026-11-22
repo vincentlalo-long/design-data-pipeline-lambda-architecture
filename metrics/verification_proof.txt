@@ -1,0 +1,38 @@
+=== Docker Services ===
+NAME           IMAGE                 COMMAND                  SERVICE    CREATED          STATUS                    PORTS
+hw4-kafka      apache/kafka:latest   "/__cacert_entrypoin…"   kafka      47 minutes ago   Up 47 minutes             0.0.0.0:9092->9092/tcp, [::]:9092->9092/tcp
+hw4-postgres   postgres:16-alpine    "docker-entrypoint.s…"   postgres   47 minutes ago   Up 47 minutes (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp
+
+=== Kafka Topic (1 Partition) ===
+Topic: nyc_taxi_events	TopicId: 1n9jU0WWRH2dTJ18Yul16g	PartitionCount: 1	ReplicationFactor: 1	Configs: min.insync.replicas=1
+	Topic: nyc_taxi_events	Partition: 0	Leader: 1	Replicas: 1	Isr: 1	Elr: 	LastKnownElr: 
+
+=== PostgreSQL Q1/Q2 & Ground-Truth Verification (E5_C2_4c4g_r2) ===
+=== Pipeline State ===
+Watermark H = 110604, batch_runs = 4, updated_at = 2026-11-22 07:04:35.656938+00:00
+
+=== Q1: Top 10 Categories by total_amount_cents ===
+  zone_132   | count=    6003 | amount_cents=    47603801
+  zone_138   | count=    3629 | amount_cents=    23565560
+  zone_161   | count=    5844 | amount_cents=    13965515
+  zone_230   | count=    4316 | amount_cents=    11333307
+  zone_237   | count=    5674 | amount_cents=    11162834
+  zone_236   | count=    5614 | amount_cents=    11133578
+  zone_186   | count=    4187 | amount_cents=    10224181
+  zone_162   | count=    4136 | amount_cents=     9486245
+  zone_142   | count=    4221 | amount_cents=     9150031
+  zone_163   | count=    3481 | amount_cents=     8149449
+
+=== Q2: System Total ===
+  Serving total_count = 120000, total_amount_cents = 327941775
+
+=== Ground-Truth Reconciliation ===
+  Ground truth count = 120000, sum_cents = 327941775
+  Diff count = 0, Diff sum_cents = 0, Category mismatches = 0
+
+=== PostgreSQL Diagnostic Query ===
+ watermark_h | batch_runs | batch_events | active_speed_events | stale_speed_events 
+-------------+------------+--------------+---------------------+--------------------
+      110604 |          4 |       110604 |                9396 |                  0
+(1 row)
+

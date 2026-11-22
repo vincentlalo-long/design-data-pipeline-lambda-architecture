@@ -1,0 +1,35 @@
+{
+  "source_name": "NYC TLC Yellow Taxi Trip Records (January 2024)",
+  "source_page": "https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page",
+  "download_url": "https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-01.parquet",
+  "download_date_utc": "2026-11-22T06:19:18Z",
+  "filename": "yellow_tripdata_2024-01.parquet",
+  "sha256": "c4d59da7bbc8abaeeeb1727947ee93d9891a71acb42854bd80db1571b2030510",
+  "input_rows": 2964624,
+  "valid_rows": 2928625,
+  "rejected_rows": 35999,
+  "rejection_breakdown": {
+    "null_required_fields": 0,
+    "invalid_pu_location_id": 0,
+    "out_of_range_total_amount": 35982,
+    "out_of_month_pickup_datetime": 17
+  },
+  "cleaning_rules": [
+    "Drop rows where tpep_pickup_datetime, PULocationID, or total_amount is NULL",
+    "Keep valid TLC zones: 1 <= PULocationID <= 265",
+    "Keep positive non-outlier fares: 0 < total_amount <= 500.0 USD; convert to integer amount_cents = round(total_amount * 100)",
+    "Keep business timestamps within January 2024: 2024-01-01T00:00:00Z <= tpep_pickup_datetime < 2024-02-01T00:00:00Z"
+  ],
+  "sampling": {
+    "seed": 42,
+    "normalized_pool_size": 50000,
+    "repo_sample_size": 1500,
+    "distinct_categories": 205
+  },
+  "schema_notes": {
+    "event_id": "24-char SHA-256 hex digest of source row index and canonical fields",
+    "event_time": "Original tpep_pickup_datetime formatted as ISO-8601 UTC",
+    "category": "Pickup taxi zone (zone_001 .. zone_265)",
+    "amount_cents": "Integer total_amount * 100"
+  }
+}

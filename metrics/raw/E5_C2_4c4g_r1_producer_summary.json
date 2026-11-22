@@ -1,0 +1,9 @@
+{
+  "phases": "1000:120",
+  "run_start_epoch": 1795330816.5883381,
+  "run_end_epoch": 1795330936.582248,
+  "elapsed_s": 120.0001,
+  "emitted_events": 120000,
+  "send_errors": 0,
+  "actual_avg_rate": 999.999
+}
