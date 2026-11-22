@@ -106,7 +106,7 @@ html_full = f"""<!DOCTYPE html>
   p {{
     margin-top: 2px;
     margin-bottom: 2.5px;
-    text-align: justify;
+    text-align: left;
   }}
   ul, ol {{
     margin-top: 2px;
@@ -115,7 +115,7 @@ html_full = f"""<!DOCTYPE html>
   }}
   li {{
     margin-bottom: 1.5px;
-    text-align: justify;
+    text-align: left;
   }}
   pre {{
     background-color: #f7f7f7;
@@ -133,6 +133,7 @@ html_full = f"""<!DOCTYPE html>
     background-color: #f2f2f2;
     padding: 0.5px 2px;
     border-radius: 2px;
+    overflow-wrap: anywhere;
   }}
   pre code {{
     background-color: transparent;
